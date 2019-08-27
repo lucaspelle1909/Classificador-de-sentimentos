@@ -61,7 +61,7 @@ foreach ($test_comments as $key => $value) {
 	}
 }
 
-echo "Acertos: " . $acertos . " , Total: " . (count($test_comments) - $desconsiderar);
+/*echo "Acertos: " . $acertos . " , Total: " . (count($test_comments) - $desconsiderar);
 
 echo ", Taxa de acertos: " . $acertos / (count($test_comments) - $desconsiderar) * 100;
 
@@ -71,11 +71,15 @@ echo "Verdadeiros positivos: " . $verdadeiros_positivos . "<br>";
 echo "Falsos positivos: " . $falsos_positivos . "<br><br>";
 
 echo "Verdadeiros negativos: " . $verdadeiros_negativos . "<br>";
-echo "Falsos negativos: " . $falsos_negativos . "<br><br>";
+echo "Falsos negativos: " . $falsos_negativos . "<br><br>";*/
 
-	//$frase = $_POST['frase'];
+	$frase = $_POST['frase'];
 
-	//$processamento->getAvaliation($frase);
+	if($processamento->getAvaliation($frase) == 1){
+		echo "Frase positiva";
+	}else{
+		echo "Frase negativa";
+	}
 
 
 ?>
